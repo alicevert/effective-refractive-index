@@ -1,8 +1,8 @@
 # Effective Refractive Index
 This is a program that calculates the effective refractive index of a magneto-optically (gyrotropic) anisotropic material. 
 The input parameters are core radius (b), shell thickness (d), and planar number density (1/m^2) of the nanoparticles, as well as the magnitude of the magnetic flux density (B) applied to the sample. 
-The output is the effective refractive index at each wavelength.
-The Refractive Index Simulation function is adapted from the Absorption Simulation function by Kenzie Lewis and Raaja Rajeshwari Manickam, based off algorithm by Dani et al. [1]
+The output is the effective refractive index at each wavelength. [1]
+The Refractive Index Simulation function is adapted from the Absorption Simulation function by Kenzie Lewis and Raaja Rajeshwari Manickam, based off algorithm by Dani et al. [2]
 
 ## Before running the simulation
 Edit the Refractive Index Simulation file to suit your needs. 
@@ -15,6 +15,7 @@ All the units are SI and the angles are in radians.
 Run the function in the Get Refractive Index file. This script runs the function and formats the outputs in an excel table and plot.
 
 # References
-[1] R.K. Dani, H. Wang, S.H. Bossmann, G. Wysin, and V. Chikan, “Supplemental Material for "Faraday rotation enhancement of gold coated Fe2O3 nanoparticles: Comparison of experiment and theory," ” J. Chem. Phys. 135(22), 224502 (2011). \
+[1] D. Griffiths, Introduction to Electrodynamics, 4th Edition ed. (2017).
+R.K. Dani, H. Wang, S.H. Bossmann, G. Wysin, and V. Chikan, “Supplemental Material for "Faraday rotation enhancement of gold coated Fe2O3 nanoparticles: Comparison of experiment and theory," ” J. Chem. Phys. 135(22), 224502 (2011). \
 [2] A. Ibrahim, “Synthesis and Characterization of Magnetic Nanoparticles to Incorporate into Silicon Waveguides to be Used as Optical Isolators,” M.S. thesis, Eng. Phys., McMaster Univ., Hamilton, Ontario, 2019. [Online]. Available: https://macsphere.mcmaster.ca/bitstream/11375/24720/2/Ibrahim_Amr_E_201908_MASc.pdf 
 
