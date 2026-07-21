@@ -2,14 +2,14 @@ close all;
 clc
 clear 
 
-% Parameters of SnO2 core
+% Parameters of anisotropic material (SnO2)
 
 b = 12.4; %core radius [nm]
 d = 2.5; %shell thickness [nm]
 n = 25e12; %planar density [m^-2]
 B = 1; %magnetic flux density at sample [T]
 
-% Effective dielectric permittivity
+% Effective refractive index
 
 [wavelength,n_eff]=Refractive_Index_Simulation(b,d,n,B)
 
