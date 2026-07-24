@@ -13,7 +13,7 @@ All the units are SI and the angles are in radians.
 
 ## Running the simulation
 Run the function in the Get Refractive Index file. This script runs the function and formats the outputs in an excel table and plot.
-![Figure Description](images/n_eff_plot.png)   
+![Figure Description](n_eff_plot.png)   
 
 # References
 [1] D. Griffiths, Introduction to Electrodynamics, 4th Edition ed. (2017). \
