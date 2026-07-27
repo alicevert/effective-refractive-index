@@ -1,6 +1,6 @@
 # Effective Refractive Index
 This is a program that calculates the effective refractive index of a magneto-optically (gyrotropic) anisotropic material. 
-The input parameters are core radius (b), shell thickness (d), and planar number density (1/m^2) of the nanoparticles, as well as the magnitude of the magnetic flux density (B) applied to the sample. 
+The input parameters are core radius (b) [nm], shell thickness (d) [nm], and planar number density [1/m^2] of the nanoparticles, as well as the magnitude of the magnetic flux density (B) [T] applied to the sample. 
 The output is the effective refractive index at each wavelength. [1]
 The Refractive Index Simulation function is adapted from the Absorption Simulation function by Kenzie Lewis and Raaja Rajeshwari Manickam, based off algorithm by Dani et al. [2]
 
