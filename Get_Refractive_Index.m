@@ -1,19 +1,47 @@
+% Last Updated: 2026-07-29 by Alice Calvert
+% This is a script that simulates the wavelength-dependent effective refractive index of a magneto-optically (gyrotropic) 
+% anisotropic nanoparticle across different wavelengths using the Maxwell-Garnet theory.
+% See the Refractive_Index_Simulation file for more details on the inputs.
+% The effective refractive index (n_eff) and extinction coefficient (k) are formatted into an excel table and plotted.
+
+% ------------------------------------------------------------- %
+% ----------------------- Initialization ---------------------- %
+% ------------------------------------------------------------- %
+
 close all;
 clc
 clear 
 
-% Parameters of anisotropic material (SnO2)
+% ---------------- Define constants & variables --------------- %
 
-b = 12.4; %core radius [nm]
-d = 2.5; %shell thickness [nm]
-n = 25e12; %planar density [m^-2]
-B = 1; %magnetic flux density at sample [T]
+filename = input("Enter the name of the excel file:", 's');
+lambda = input("Enter the range of wavelengths [m] in the format 'start:step:stop':");
 
-% Effective refractive index
+% Parameters of gyrotropic nanoparticles
 
-[wavelength,n_eff]=Refractive_Index_Simulation(b,d,n,B)
+while true
+    core = input('Enter the nanoparticle material ("sno2", "fe2o3", or "other"):', 's');
+    if strcmpi(core, 'sno2')
+        break;
+    elseif strcmpi(core, 'fe2o3')
+        break;
+    elseif strcmpi(core, 'other')
+        break;
+    else
+        fprintf('Invalid input. Please enter "sno2", "fe2o3", or "other".\n\n');
+    end
+end
 
-% Create excel table
+b = input("Enter the nanoparticle radius [nm]:");
+B = input("Enter the magnitude of the magnetic flux density applied to the sample [T]:");
+
+% ------------------------------------------------------------- %
+% ----- Wavelength-dependent effective refractive index  ------ %
+% ------------------------------------------------------------- %
+
+[wavelength,n_eff]=Refractive_Index_Simulation(b,core,B,lambda);
+
+% --------------------- Format excel table -------------------- %
 
 wavelength_um = wavelength * 1e6;
 
@@ -25,17 +53,27 @@ T = table( ...
     'VariableNames', ...
     {'wavelength (um)','Re(n_eff)','wl (um)','Im(n_eff)'});
 
-writetable(T, "Refractive_Index_Output.xlsx");
+writetable(T, sprintf('%s.xlsx', filename));
 
-% Plot
+% -------------- Plot complex refractive index ---------------- %
 
-figure
 
-plot(wavelength_um, real(n_eff), ...
-    'b-', 'LineWidth', 2)
+figure(1)
+
+plot(wavelength_um, real(n_eff), 'LineWidth', 2)
 
 xlabel('Wavelength (\mum)')
-ylabel('Re(n_{eff})')
-title('Real Effective Refractive Index for SnO2')
+ylabel('n_{eff}')
+title('Real Effective Refractive Index')
+
+box on
+
+figure(2)
+
+plot(wavelength_um, imag(n_eff),'LineWidth', 2)
+
+xlabel('Wavelength (\mum)')
+ylabel('k_{eff}')
+title('Effective Extinction Coefficient')
 
 box on
