@@ -1,14 +1,11 @@
 # Effective Refractive Index
-This is a program that calculates the effective refractive index of a magneto-optically (gyrotropic) anisotropic  nanoparticle using Maxwell-Garnett theory.
-The input parameters are core radius (b) [nm] and material, the magnitude of magnetic flux density (B) [T] applied to nanoparticles, and the range of wavelengths. 
+This is a program that calculates the effective refractive index of a nanoparticle using Maxwell-Garnett theory.
+The input parameters are nanoparticle radius (b) [nm] and material, the magnitude of magnetic flux density (B) [T] applied to nanoparticle, and the range of wavelengths. 
 The output is the effective refractive index at each wavelength. [1]
 The Refractive Index Simulation function is adapted from the Absorption Simulation function by Kenzie Lewis and Raaja Rajeshwari Manickam, based off algorithm by Dani et al. [2]
 
 ## Before running the simulation
-Edit the Refractive Index Simulation file to suit your needs. 
-Depending on whether a single wavelength (e.g., 532 nm) or a wavelength sweep (e.g., 200 to 900 nm) is being used, comment out the irrelevant parts.
-Make sure the fitted parameters (for the core - SnO2) are up to date with the most recent experimental data.
-Comment out the parameters for the magneto-optically (gyrotropically) anisotropic material that's not of interest (either SnO2 or Fe2O3).
+Make sure the fitted parameters (for SnO2, Fe2O3, Au, or other materials) are up to date with the most recent experimental data.
 All the units are SI and the angles are in radians.
 
 ## Running the simulation
