@@ -1,4 +1,4 @@
-# Effective Refractive Index
+# Nanoparticle Effective Refractive Index
 This is a program that calculates the effective refractive index of a nanoparticle using Maxwell-Garnett theory.
 The input parameters are nanoparticle radius (b) [nm] and material, the magnitude of magnetic flux density (B) [T] applied to nanoparticle, and the range of wavelengths. 
 The output is the effective refractive index at each wavelength. [1]
