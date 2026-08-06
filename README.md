@@ -4,7 +4,7 @@ The input parameters are nanoparticle radius (b) [nm] and material, the magnitud
 The output is the effective refractive index at each wavelength. [1]
 The Refractive Index Simulation function is adapted from the Absorption Simulation function by Kenzie Lewis and Raaja Rajeshwari Manickam, based off algorithm by Dani et al. [2]
 
-## Before running the simulation
+## Before simulation
 Make sure the fitted parameters (for SnO2, Fe2O3, Au, or other materials) are up to date with the most recent experimental data.
 All the units are SI and the angles are in radians.
 
