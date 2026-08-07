@@ -1,4 +1,4 @@
-% Last Updated: 2026-08-05 by Alice Calvert
+% Last Updated: 2026-08-07 by Alice Calvert
 % This is a script that simulates the wavelength-dependent effective refractive index 
 % of a nanoparticle across different wavelengths using the Maxwell-Garnett theory.
 % See the Refractive_Index_Simulation file for more details on the inputs.
@@ -41,7 +41,7 @@ B = input("Enter the magnitude of the magnetic flux density applied to the sampl
 % ----- Wavelength-dependent effective refractive index  ------ %
 % ------------------------------------------------------------- %
 
-[wavelength,n_eff]=Refractive_Index_Simulation(a,material,B,lambda);
+[wavelength,n_eff]=Refractive_Index_NP_Simulation(a,material,B,lambda);
 
 % --------------------- Format excel table -------------------- %
 
