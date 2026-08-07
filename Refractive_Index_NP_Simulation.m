@@ -20,7 +20,7 @@
 %% -------------------------------------------------------------------------- %%
 %% ----------------------- Refractive Index Function ------------------------ %%
 %% -------------------------------------------------------------------------- %%
-function [wavelength,n_eff]=Refractive_Index_Simulation(np_radius,np_material,magnetic_flux,wavelength)
+function [wavelength,n_eff]=Refractive_Index_NP_Simulation(np_radius,np_material,magnetic_flux,wavelength)
 
 tic %start timing run
 
@@ -46,7 +46,7 @@ if strcmpi(np_material, 'sno2')
     tau=0.347e-15;                          % scattering time
     vf=0;                                   % Fermi velocity
     wp=0;                                   % plasma frequency
-    gammap=1/tau+vf/b;                      % damping frequency
+    gammap=1/tau+vf/a;                      % damping frequency
     Ms=250e3;                               % saturation magnetization, 250-300e3 [3]
     g0=1.2e15;                              % fitted parameter for tin oxide absorption 
     w0=6.7e15;                              % fitted parameter for tin oxide absorption 
@@ -68,7 +68,7 @@ elseif strcmpi(np_material, 'au')
     tau=9.1e-15;                            % scattering time
     vf=1.4e6;                               % Fermi velocity
     wp=1.37e16;                             % plasma frequency
-    gammap=1/tau+vf/b;                    % damping frequency
+    gammap=1/tau+vf/a;                    % damping frequency
     Ms=0;                                   % saturation magnetization
     g0=4.43e15;                             % fitted parameter for gold absorption [2], CHANGE
     w0=3.86e15;                             % fitted parameter for gold absorption [2], CHANGE
